@@ -1,0 +1,33 @@
+{
+  "name": "cataliwos/ws-user.cwapp",
+  "description": "Website user manager",
+  "keywords": ["user", "website-app", "cws", "catali", "web", "store"],
+  "homepage": "https://github.com/cataliwos/ws-user.cwapp",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ikechukwu Okalia",
+      "email": "dev@ikechukwuokalia.com"
+    }
+  ],
+  "require": {
+    "tymfrontiers-cdn/php-data" : ">=0.1@stable",
+    "tymfrontiers-cdn/php-mysql-database" : ">=0.1@stable",
+    "tymfrontiers-cdn/php-mysql-database-object" : ">=0.1@stable",
+    "tymfrontiers-cdn/php-instance-error" : ">=0.1@stable",
+    "tymfrontiers-cdn/php-validator" : ">=0.1@stable",
+    "tymfrontiers-cdn/php-generic" : ">=0.1@stable",
+    "tymfrontiers-cdn/php-multiform" : ">=0.1@stable",
+    "cataliwos/ws-helper.cprj": ">=0.1@stable"
+  },
+  "require-dev": {},
+  "autoload": {
+    "psr-4": {
+      "Catali\\": "src/",
+      "Catali\\User\\": "src/"
+    },
+    "files" : []
+  },
+  "repositories" : []
+}
