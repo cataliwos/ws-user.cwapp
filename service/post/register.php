@@ -29,6 +29,7 @@ $params = $gen->requestParam([
   "accepted_terms" => ["accepted_terms", "boolean"],
   "rdt" => ["rdt", "url"],
   "payload" =>["payload","script",1,0],
+  "otp" =>["otp","username", 3, 28, [], "mixed", [" ", "-", "_", "."]],
   "form" => ["form","text",2,55],
   "CSRF_token" => ["CSRF_token","text",5,500]
 ], $post, ["country_code", "name", "surname", "email", "phone", "password", "CSRF_token", "form"]);

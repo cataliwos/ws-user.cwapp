@@ -23,7 +23,8 @@ if ($session->isLoggedIn()) {
 $ws = ws_info();
 $reg_link = Generic::setGet(WHOST . "/ws-user/register", [
   "payload" => $params['payload'],
-  "rdt" => $params['rdt']
+  "rdt" => $params['rdt'],
+  "express" => $params['express']
 ]);
 $params["wscode"] = $ws->wscode;
 $params["wsdomain"] = $ws->domain;

@@ -210,10 +210,9 @@ $db_name = get_database("data");
         })
       }), false);
     } else {
-      console.error("Cannot redirect");
+      // console.error("Cannot redirect");
     }
-    console.log(user);
-    console.log(address);
+
   }
   (function(){
     $(document).on("change", "#xp-country", function (){

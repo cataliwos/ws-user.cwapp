@@ -22,7 +22,8 @@ if ($session->isLoggedIn()) {
 }
 $login_link = Generic::setGet(WHOST . "/ws-user/login", [
   "payload" => $params['payload'],
-  "rdt" => $params['rdt']
+  "rdt" => $params['rdt'],
+  "express" => $params['express']
 ]);
 $ws = ws_info();
 
