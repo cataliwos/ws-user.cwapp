@@ -10,6 +10,7 @@ use TymFrontiers\Data,
 $gen = new Generic;
 $params = $gen->requestParam([
   "payload" =>["payload","script",1,0],
+  "eos" =>["eos","boolean"],
   "express" =>["express","boolean"],
   "rdt" =>["rdt","url"]
 ], $_GET, []);

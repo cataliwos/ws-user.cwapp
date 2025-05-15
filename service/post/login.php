@@ -82,7 +82,7 @@ if (!$remember) {
   $remember = \strtotime("+1 Week");
 }
 $session->login($user, $remember);
-$cart_user = !empty($_COOKIE["_wscartusr"]) ? $data->decodeDecrypt($_COOKIE["_wscartusr"]) : null;
+$cart_user = !empty($_COOKIE["_wscartusr"]) ? $data_obj->decodeDecrypt($_COOKIE["_wscartusr"]) : null;
 $conn = query_conn();
 if ($cart_user) {
   $db_name = \get_database("base");

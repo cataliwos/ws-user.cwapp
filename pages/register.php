@@ -10,6 +10,7 @@ use TymFrontiers\Data,
 $gen = new Generic;
 $params = $gen->requestParam([
   "payload" =>["payload","script",1,0],
+  "eos" =>["eos","boolean"],
   "express" =>["express","boolean"],
   "rdt" =>["rdt","url"]
 ], $_GET, []);
@@ -113,27 +114,27 @@ $data_db = get_database("data");
             </div>
             <div class="grid-6-tablet">
               <label for="usr-name">Name</label>
-              <input type="text" name="name" value="Louis" autocomplete="name" id="usr-name" required placeholder="First name">
+              <input type="text" name="name" value="" autocomplete="name" id="usr-name" required placeholder="First name">
             </div>
             <div class="grid-6-tablet">
               <label for="usr-surname">Surame</label>
-              <input type="text" name="surname" value="Boss" autocomplete="name" id="usr-surname" required placeholder="Surname">
+              <input type="text" name="surname" value="" autocomplete="name" id="usr-surname" required placeholder="Surname">
             </div>
             <div class="grid-7-tablet">
               <label for="usr-email">Email</label>
-              <input type="email" name="email" value="me@sirlouis.io" required placeholder="your-email@domain.ext" autocomplete="email" id="usr-email">
+              <input type="email" name="email" value="" required placeholder="your-email@domain.ext" autocomplete="email" id="usr-email">
             </div>
             <div class="grid-5-tablet">
               <label for="usr-phone">Phone</label>
-              <input type="tel" name="phone" value="0808 074 8147" required placeholder="0801 234 5678" autocomplete="tel-national" id="usr-phone">
+              <input type="tel" name="phone" value="" required placeholder="0801 234 5678" autocomplete="tel-national" id="usr-phone">
             </div>
             <div class="grid-6-tablet">
               <label for="usr-password">New Password</label>
-              <input type="password" name="password" value="PassWd@100" required placeholder="enter-password" autocomplete="off" id="usr-password">
+              <input type="password" name="password" value="" required placeholder="enter-password" autocomplete="off" id="usr-password">
             </div>
             <div class="grid-6-tablet">
               <label for="usr-passwordrpt">Repeat Password</label>
-              <input type="password" name="password_repeat" value="PassWd@100" required placeholder="repeat-password" autocomplete="off" id="usr-passwordrpt">
+              <input type="password" name="password_repeat" value="" required placeholder="repeat-password" autocomplete="off" id="usr-passwordrpt">
             </div>
             <div class="grid-12-tablet align-center">
               <label>Kindly read and accept <a href="https://www.cataliws.com/index/terms-and-conditions" target="_blank"> <b><i class="fas fa-link"></i> Applicable Terms &amp; Conditions</b></a></label>

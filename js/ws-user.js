@@ -1,8 +1,14 @@
 const usrLogin = (rsp = {}) => {
   if (rsp && rsp.status == "0.0" && "rdt" in rsp) {
-    setTimeout(() => {
-      redirectTo(rsp.rdt);
-    },1000 * 3);
+    if ("eos" in param && parseBool(param.eos)) {
+      console.log("ready");
+      
+      window.close();
+    } else {
+      setTimeout(() => {
+        redirectTo(rsp.rdt);
+      },1000 * 3);
+    }
   }
 }
 const chkRegister = (frm) => {
@@ -34,10 +40,14 @@ function RegWithOtp (code) {
 const usrRegister = (resp) => {
   if( resp && ( resp.errors.length <= 0 || resp.status == "0.0") ){
     // $('#register-form').reset();
-    if ( resp.rdt.length > 0 ) {
-      setTimeout(function(){ window.location = resp.rdt; },3200);
+    if ("eos" in param && parseBool(param.eos)) {
+      window.close();
     } else {
-      setTimeout(function(){ removeAlert(); },3200);
+      if ( resp.rdt.length > 0 ) {
+        setTimeout(function(){ window.location = resp.rdt; },3200);
+      } else {
+        setTimeout(function(){ removeAlert(); },3200);
+      }
     }
   }
 }
